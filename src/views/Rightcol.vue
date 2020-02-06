@@ -1,11 +1,20 @@
 <template>
     <div class="aside">
         <h1>Colonne de droite</h1>
-        <InputBlock v-bind:class="inputdemerde.class" v-bind:value="inputdemerde.value" v-on:input="inputdemerde.value = $event">
+
+
+        <InputBlock
+                v-bind:class="inputdemerde.class"
+                v-bind:value="inputdemerde.value"
+                v-bind:placeholder="inputdemerde.placeholder"
+                v-on:input="inputdemerde.value = $event">
             texte a mettre dans le Slot par défaut
             <template v-slot:label>Texte dans le Slot Label</template>
             <template v-slot:message>{{inputdemerde.message}}</template>
         </InputBlock>
+
+
+
         <hr/>
     </div>
 </template>
